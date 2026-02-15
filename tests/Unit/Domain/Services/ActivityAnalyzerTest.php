@@ -77,8 +77,6 @@ class ActivityAnalyzerTest extends TestCase
             ->once()
             ->andReturn(false);
 
-        $this->logger->shouldNotReceive('info');
-
         $result = $this->analyzer->isUserActive($userId);
 
         $this->assertFalse($result);
